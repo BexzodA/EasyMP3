@@ -36,7 +36,6 @@ def main():
         UI()
         f = open('options.txt', 'w')
         playlist = url.get()
-        print(playlist)
         f.write(playlist)
         add_to_startup()
     else:
@@ -60,9 +59,11 @@ def add_to_startup(file_path=""):
 def download(playlist):
     ydl_opts = {
         'outtmpl': 'Archive/%(title)s.%(ext)s',
-        'download_archive' : 'Archive.txt',
-        'quiet' : True,
-        'format' : 'm4a',
+        'download_archive': 'Archive.txt',
+        'quiet': True,
+        'no_warnings': True,
+        'ignoreerrors': True,
+        'format': 'm4a',
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([playlist])
