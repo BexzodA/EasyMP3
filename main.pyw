@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 from __future__ import unicode_literals
 import sys
 import subprocess
@@ -73,8 +68,5 @@ def download(playlist):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([playlist])
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
