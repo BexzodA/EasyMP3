@@ -3,14 +3,17 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+import sys
+import subprocess
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'youtube-dl'])
+
 from __future__ import unicode_literals
 from tkinter import *
 import youtube_dl
 import time
 import getpass
 import os
-import subprocess
-import sys
 
 root = Tk()
 url = StringVar(root)
@@ -32,8 +35,7 @@ def UI():
     root.mainloop()
 
 def main():
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'youtube-dl'])
+
     global playlist
     if len(sys.argv) == 1:
         UI()
