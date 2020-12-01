@@ -9,6 +9,7 @@ import youtube_dl
 import time
 import getpass
 import os
+import subprocess
 import sys
 
 root = Tk()
@@ -31,6 +32,8 @@ def UI():
     root.mainloop()
 
 def main():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'youtube-dl'])
     global playlist
     if len(sys.argv) == 1:
         UI()
