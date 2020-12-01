@@ -3,12 +3,12 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+from __future__ import unicode_literals
 import sys
 import subprocess
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'youtube-dl'])
 
-from __future__ import unicode_literals
 from tkinter import *
 import youtube_dl
 import time
